@@ -1,0 +1,37 @@
+{
+    "manifest_version": 2,
+    "name": "ふるひとのURLしょーてんさーびす！",
+    "short_name": "しょーてんさーびす！",
+    "version": "1.1.0",
+    "description": "個人プログラマーのフルヒトが作ったURL短縮サービスです。そんな短くない？シベリア送りだ。",
+    "icons": {
+        "16": "src/icon16.png",
+        "32": "src/icon32.png",
+        "48": "src/icon48.png",
+        "64": "src/icon64.png",
+        "128": "src/icon128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "src/icon.png"
+        },
+        "default_title": "URL短縮メニュー",
+        "default_popup": "assets/short.html"
+    },
+    "permissions": [
+        "notifications",
+        "contextMenus",
+        "tabs",
+        "bookmarks",
+        "http://furcht968.ml/",
+        "http://u.furcht968.ml/"
+        //"http://koi.si/"
+        //見つけてくれてありがと！！！！
+        //https://twitter.com/BinaryRussia968
+    ],
+    "background": {
+        "scripts": [ "src/background.js" ],
+        // recommended
+        "persistent": false
+    }
+}
