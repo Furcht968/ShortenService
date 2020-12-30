@@ -1,9 +1,11 @@
-chrome.contextMenus.create(
-    {
-        id:"shorten",
-        title: "URLをしょーてん！"
-    }
-);
+chrome.runtime.onInstalled.addListener(() => {
+    chrome.contextMenus.create(
+        {
+            id:"shorten",
+            title: "URLをしょーてん！"
+        }
+    );
+});
 function copipe(text) {
     var copyFrom = document.createElement("textarea");
     copyFrom.textContent = text;
@@ -16,7 +18,7 @@ function copipe(text) {
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
     if (info.menuItemId == "shorten") {
         var request = new XMLHttpRequest();
-        request.open('GET', "http://u.furcht968.ml/shoten_api.php?url="+tab.url, true);
+        request.open('GET', "https://u.furcht968.ml/shoten_api.php?url="+tab.url, true);
         request.onload = function () {
             var data = this.response;
             copipe(JSON.parse(data)["url"]);

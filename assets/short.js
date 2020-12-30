@@ -13,9 +13,9 @@ chrome.tabs.query({ active: true, currentWindow: true, lastFocusedWindow: true }
  }
  $('.shbut').on('click', function() {
     var urlval=$("#url").val();
-    location.href="http://u.furcht968.ml/shoten_wapi.php?url="+urlval+"&resp="+location.href;
+    location.href="https://u.furcht968.ml/shoten_wapi.php?url="+urlval+"&resp="+location.href;
   });
   if (getParam("status")=="ok") {
-    $(".url").html("短縮化に成功しました！<br>http://u.furcht968.ml/"+getParam("shoten"));
+    $(".url").html("短縮化に成功しました！<br>https://u.furcht968.ml/"+getParam("shoten"));
   }
 });
